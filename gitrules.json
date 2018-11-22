@@ -1,0 +1,168 @@
+{
+
+	"setup-files": [
+	
+	{
+      "path": "files/file1.txt",
+	  "contents" : ""
+	},
+	{
+      "path": "files/file2.txt",
+	  "contents" : ""
+	},
+	{
+      "path": "misc/file3.txt",
+	  "contents" : ""
+	},
+	
+	{
+      "path": "files/file7.txt",
+	  "contents" : ""
+	}
+],
+	
+	"rules": [
+	
+		{
+		"rule": "text",
+		"separator": "-",
+		"width": 100,
+		"heading": "SETTING UP REPOSITORY",
+		"double-space": true
+		},
+	
+		{
+		"rule": "head-exists", 
+		"stop-on-fail":true,
+		"alternative-title":"Did you create the Repo?"
+		},
+		
+		{
+		"rule": "text",
+		"separator": "-",
+		"width": 100,
+		"heading": "CREATING FILES (30 Points)",
+		"double-space": true
+		},
+		
+		{
+		"rule": "commit-with-message-updated-file", 
+		"path": "files/file4.txt", 
+		"contents": "add file4 and file5", 
+		"ignore-case": true, 
+		"score-if-correct": 10,
+		"alternative-title":"file4 was committed with the right message in the correct commit"
+		},
+			
+		{
+		"rule": "commit-with-message-updated-file", 
+		"path": "files/file5.txt", 
+		"contents": "add file4 and file5", 
+		"ignore-case": true, 
+		"score-if-correct": 10,
+		"alternative-title":"file5 was committed with the right message in the correct commit"
+		},
+		
+	
+		{
+		"rule": "commit-with-message-updated-file", 
+		"path": "misc/file6.txt", 
+		"contents": "add file6", 
+		"ignore-case": true, 
+		"score-if-correct": 10,
+		"alternative-title":"file6 was committed seperatly with the right message"
+		},
+				
+		{
+		"rule": "text",
+		"separator": "-",
+		"width": 100,
+		"heading": "MOVING FILES (60 Points)",
+		"double-space": true
+		},
+		
+		{
+		"rule": "file-has-hash-in-head",
+		"path": "files/file3.txt",
+		"hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+		"alternative-title":"file3 was moved from misc to files",
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "commit-with-message-updated-file",
+		"path": "files/file3.txt",
+		"contents": "move file3 to files",
+		"alternative-title":"File3 was committed with the right message in the right commit",
+		"ignore-case": true,
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "file-has-hash-in-head",
+		"path": "misc/file1.txt",
+		"hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+		"alternative-title":"file1 was moved from files to misc",
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "file-has-hash-in-head",
+		"path": "misc/file2.txt",
+		"hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+		"alternative-title":"file2 was moved from files to misc",
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "commit-with-message-updated-file",
+		"path": "misc/file1.txt",
+		"contents": "swap file1 and file2 with file3",
+		"alternative-title":"File1 was committed with the right message in the right commit",
+		"ignore-case": true,
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "commit-with-message-updated-file",
+		"path": "misc/file2.txt",
+		"contents": "swap file1 and file2 with file3",
+		"alternative-title":"File2 was committed with the right message in the right commit",
+		"ignore-case": true,
+		"score-if-correct": 10
+		},
+		
+		{
+		"rule": "text",
+		"separator": "-",
+		"width": 100,
+		"heading": "REMOVING FILES (20 Points)",
+		"double-space": true
+		},
+		
+		
+		{
+		"rule": "commit-with-message-updated-file",
+		"path": "files/file7.txt",
+		"contents": "remove file7",
+		"ignore-case": true,
+		"score-if-correct": 5,
+		"alternative-title": "file7 was removed in the correct commit",
+		},
+		
+		{
+		"rule": "file-untracked-in-head",
+		"path": "files/file7.txt",
+		"score-if-correct": 5,
+		"alternative-title": "file7 is no longer tracked",
+		}
+		
+		
+		
+		
+		
+		]
+	
+}
+
+		
