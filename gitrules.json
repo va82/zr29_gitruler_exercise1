@@ -154,6 +154,7 @@
 		"rule": "file-untracked-in-head",
 		"path": "files/file7.txt",
 		"score-if-correct": 5,
+		"stop-on-fail": true,
 		"alternative-title": "file7 is no longer tracked",
 		}
 		
