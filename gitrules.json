@@ -9,10 +9,6 @@
 	{
       "path": "files/file2.txt",
 	  "contents" : ""
-	},
-	{
-      "path": "misc/file3.txt",
-	  "contents" : ""
 	}
 ],
 	
